@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Futók</title>
+</head>
+<body>
+    <h1>Futók Listája</h1>
+    <table>
+        <tr>
+            <th>Név</th>
+            <th>Életkor</th>
+            <th>Nem</th>
+        </tr>
+        <tr th:each="futo : ${futok}">
+            <td th:text="${futo.nev}"></td>
+            <td th:text="${futo.eletkor}"></td>
+            <td th:text="${futo.nem}"></td>
+        </tr>
+    </table>
+    <a href="/">Vissza a főoldalra</a>
+</body>
+</html>
